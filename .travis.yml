@@ -7,3 +7,8 @@ before_install:
 
 script:
   - docker run -e CI=true react-docker npm run test
+
+deploy:
+  provider: azure_web_apps
+  on:
+    branch: master
